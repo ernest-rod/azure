@@ -1,0 +1,186 @@
+{
+	"name": "DestinationDataset_qfv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CustomerNumber",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "AnnualRevenue",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "AccountRepEmployeeNumber",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Comments",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ProblemZipCode",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ProblemPlanetAbbrv",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ProblemEmail",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "StartDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "NoDeliveriesFlag",
+				"type": "bit",
+				"precision": 1,
+				"scale": 0
+			},
+			{
+				"name": "NumberOfEmployees",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ProblemUseBillingInfoFlag",
+				"type": "bit",
+				"precision": 1,
+				"scale": 0
+			},
+			{
+				"name": "ProblemContact",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ProblemAddress1",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ProblemAddress2",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ProblemCity",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ProblemState",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillingCity",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillingState",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillingZipCode",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillingPlanetAbbrv",
+				"type": "char",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillingEmail",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "CreditLimit",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "ParentCustomerNumber",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Name",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillParentFlag",
+				"type": "bit",
+				"precision": 1,
+				"scale": 0
+			},
+			{
+				"name": "BillingContact",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillingAddress1",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BillingAddress2",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Customer"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,337 @@
+{
+	"name": "CopyLocalDataToAzure",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_qfv",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.Customer"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Customer"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "CustomerNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CustomerNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AnnualRevenue",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "AnnualRevenue",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "AccountRepEmployeeNumber",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "AccountRepEmployeeNumber",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Comments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Comments",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemZipCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemZipCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemPlanetAbbrv",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemPlanetAbbrv",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemEmail",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemEmail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StartDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "StartDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "NoDeliveriesFlag",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "NoDeliveriesFlag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "NumberOfEmployees",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "NumberOfEmployees",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemUseBillingInfoFlag",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "ProblemUseBillingInfoFlag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemContact",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemContact",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemAddress1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemAddress1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemAddress2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemAddress2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemCity",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemCity",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProblemState",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProblemState",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingCity",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingCity",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingState",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingState",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingZipCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingZipCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingPlanetAbbrv",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingPlanetAbbrv",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingEmail",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingEmail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CreditLimit",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "CreditLimit",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "ParentCustomerNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ParentCustomerNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillParentFlag",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "BillParentFlag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingContact",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingContact",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingAddress1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingAddress1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillingAddress2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillingAddress2",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_qfv",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_qfv",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

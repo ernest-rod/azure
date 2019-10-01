@@ -1,0 +1,186 @@
+{
+	"name": "SourceDataset_qfv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LocalMachine",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "CustomerNumber",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ParentCustomerNumber",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "Name",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillParentFlag",
+				"type": "bit",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingContact",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingAddress1",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingAddress2",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingCity",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingState",
+				"type": "char",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingZipCode",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingPlanetAbbrv",
+				"type": "char",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "BillingEmail",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "CreditLimit",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "ProblemUseBillingInfoFlag",
+				"type": "bit",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemContact",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemAddress1",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemAddress2",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemCity",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemState",
+				"type": "char",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemZipCode",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemPlanetAbbrv",
+				"type": "char",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "ProblemEmail",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "StartDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "NoDeliveriesFlag",
+				"type": "bit",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "NumberOfEmployees",
+				"type": "int",
+				"precision": 10,
+				"scale": 255
+			},
+			{
+				"name": "AnnualRevenue",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "AccountRepEmployeeNumber",
+				"type": "int",
+				"precision": 10,
+				"scale": 255
+			},
+			{
+				"name": "Comments",
+				"type": "varchar",
+				"precision": 255,
+				"scale": 255
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Customer"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
