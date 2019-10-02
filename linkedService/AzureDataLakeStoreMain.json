@@ -1,0 +1,14 @@
+{
+	"name": "AzureDataLakeStoreMain",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://inotekdemodatalake.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "821571fe-f148-4b87-b275-6fcc63b79d68",
+			"subscriptionId": "b422d504-452d-4c32-86ff-df16b9c82ff1",
+			"resourceGroupName": "AzureDataWarehouse-ResourceGroup"
+		}
+	}
+}
