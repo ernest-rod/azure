@@ -28,7 +28,15 @@
 						"type": "SqlServerSource"
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureDataLakeStoreWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -40,8 +48,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "CustomerNumber",
-									"type": "String"
+									"type": "String",
+									"ordinal": 1
 								}
 							},
 							{
@@ -50,8 +58,8 @@
 									"type": "Decimal"
 								},
 								"sink": {
-									"name": "AnnualRevenue",
-									"type": "Decimal"
+									"type": "Decimal",
+									"ordinal": 2
 								}
 							},
 							{
@@ -60,8 +68,8 @@
 									"type": "Int32"
 								},
 								"sink": {
-									"name": "AccountRepEmployeeNumber",
-									"type": "Int32"
+									"type": "Int32",
+									"ordinal": 3
 								}
 							},
 							{
@@ -70,8 +78,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Comments",
-									"type": "String"
+									"type": "String",
+									"ordinal": 4
 								}
 							},
 							{
@@ -80,8 +88,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemZipCode",
-									"type": "String"
+									"type": "String",
+									"ordinal": 5
 								}
 							},
 							{
@@ -90,8 +98,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemPlanetAbbrv",
-									"type": "String"
+									"type": "String",
+									"ordinal": 6
 								}
 							},
 							{
@@ -100,8 +108,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemEmail",
-									"type": "String"
+									"type": "String",
+									"ordinal": 7
 								}
 							},
 							{
@@ -110,8 +118,8 @@
 									"type": "DateTime"
 								},
 								"sink": {
-									"name": "StartDate",
-									"type": "DateTime"
+									"type": "DateTime",
+									"ordinal": 8
 								}
 							},
 							{
@@ -120,8 +128,8 @@
 									"type": "Boolean"
 								},
 								"sink": {
-									"name": "NoDeliveriesFlag",
-									"type": "Boolean"
+									"type": "Boolean",
+									"ordinal": 9
 								}
 							},
 							{
@@ -130,8 +138,8 @@
 									"type": "Int32"
 								},
 								"sink": {
-									"name": "NumberOfEmployees",
-									"type": "Int32"
+									"type": "Int32",
+									"ordinal": 10
 								}
 							},
 							{
@@ -140,8 +148,8 @@
 									"type": "Boolean"
 								},
 								"sink": {
-									"name": "ProblemUseBillingInfoFlag",
-									"type": "Boolean"
+									"type": "Boolean",
+									"ordinal": 11
 								}
 							},
 							{
@@ -150,8 +158,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemContact",
-									"type": "String"
+									"type": "String",
+									"ordinal": 12
 								}
 							},
 							{
@@ -160,8 +168,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemAddress1",
-									"type": "String"
+									"type": "String",
+									"ordinal": 13
 								}
 							},
 							{
@@ -170,8 +178,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemAddress2",
-									"type": "String"
+									"type": "String",
+									"ordinal": 14
 								}
 							},
 							{
@@ -180,8 +188,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemCity",
-									"type": "String"
+									"type": "String",
+									"ordinal": 15
 								}
 							},
 							{
@@ -190,8 +198,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ProblemState",
-									"type": "String"
+									"type": "String",
+									"ordinal": 16
 								}
 							},
 							{
@@ -200,8 +208,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingCity",
-									"type": "String"
+									"type": "String",
+									"ordinal": 17
 								}
 							},
 							{
@@ -210,8 +218,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingState",
-									"type": "String"
+									"type": "String",
+									"ordinal": 18
 								}
 							},
 							{
@@ -220,8 +228,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingZipCode",
-									"type": "String"
+									"type": "String",
+									"ordinal": 19
 								}
 							},
 							{
@@ -230,8 +238,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingPlanetAbbrv",
-									"type": "String"
+									"type": "String",
+									"ordinal": 20
 								}
 							},
 							{
@@ -240,8 +248,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingEmail",
-									"type": "String"
+									"type": "String",
+									"ordinal": 21
 								}
 							},
 							{
@@ -250,8 +258,8 @@
 									"type": "Decimal"
 								},
 								"sink": {
-									"name": "CreditLimit",
-									"type": "Decimal"
+									"type": "Decimal",
+									"ordinal": 22
 								}
 							},
 							{
@@ -260,8 +268,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "ParentCustomerNumber",
-									"type": "String"
+									"type": "String",
+									"ordinal": 23
 								}
 							},
 							{
@@ -270,8 +278,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "Name",
-									"type": "String"
+									"type": "String",
+									"ordinal": 24
 								}
 							},
 							{
@@ -280,8 +288,8 @@
 									"type": "Boolean"
 								},
 								"sink": {
-									"name": "BillParentFlag",
-									"type": "Boolean"
+									"type": "Boolean",
+									"ordinal": 25
 								}
 							},
 							{
@@ -290,8 +298,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingContact",
-									"type": "String"
+									"type": "String",
+									"ordinal": 26
 								}
 							},
 							{
@@ -300,8 +308,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingAddress1",
-									"type": "String"
+									"type": "String",
+									"ordinal": 27
 								}
 							},
 							{
@@ -310,8 +318,8 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "BillingAddress2",
-									"type": "String"
+									"type": "String",
+									"ordinal": 28
 								}
 							}
 						]
@@ -325,7 +333,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_qfv",
+						"referenceName": "ExportFile",
 						"type": "DatasetReference"
 					}
 				]
