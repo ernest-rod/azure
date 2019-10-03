@@ -300,7 +300,7 @@
 						}
 					},
 					"sink": {
-						"type": "SqlServerSink"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -364,16 +364,6 @@
 								"sink": {
 									"name": "Status",
 									"type": "Byte"
-								}
-							},
-							{
-								"source": {
-									"name": "OnlineOrderFlag",
-									"type": "String"
-								},
-								"sink": {
-									"name": "OnlineOrderFlag",
-									"type": "Boolean"
 								}
 							},
 							{
@@ -517,7 +507,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SqlServerInvoice",
+						"referenceName": "AzureSqlDest_Invoice",
 						"type": "DatasetReference"
 					}
 				]
