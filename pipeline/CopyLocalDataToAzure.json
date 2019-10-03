@@ -34,7 +34,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_qfv",
+						"referenceName": "SqlServerCustomer",
 						"type": "DatasetReference"
 					}
 				],
