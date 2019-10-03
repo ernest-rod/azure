@@ -270,7 +270,7 @@
 				]
 			},
 			{
-				"name": "Copy data1",
+				"name": "CopyInvoiceADL2AzureSQL",
 				"type": "Copy",
 				"dependsOn": [
 					{
