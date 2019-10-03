@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyInvoiceData",
+				"name": "CopyInvoiceData2ADL",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
