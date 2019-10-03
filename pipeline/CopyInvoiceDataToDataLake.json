@@ -289,8 +289,248 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureDataLakeStoreReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlServerSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "SalesOrderID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SalesOrderID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "RevisionNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RevisionNumber",
+									"type": "Byte"
+								}
+							},
+							{
+								"source": {
+									"name": "OrderDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "OrderDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "DueDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DueDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShipDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Status",
+									"type": "Byte"
+								}
+							},
+							{
+								"source": {
+									"name": "OnlineOrderFlag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "OnlineOrderFlag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "PurchaseOrderNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PurchaseOrderNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AccountNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AccountNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CustomerID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CustomerID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipToAddressID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShipToAddressID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "BillToAddressID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillToAddressID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipMethod",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShipMethod",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CreditCardApprovalCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CreditCardApprovalCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SubTotal",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SubTotal",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TaxAmt",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TaxAmt",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Freight",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Freight",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "TotalDue",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TotalDue",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Comment",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Comment",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "rowguid",
+									"type": "String"
+								},
+								"sink": {
+									"name": "rowguid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "ModifiedDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ModifiedDate",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText_Invoice",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SqlServerInvoice",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []
