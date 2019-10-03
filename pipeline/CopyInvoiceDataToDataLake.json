@@ -368,16 +368,6 @@
 							},
 							{
 								"source": {
-									"name": "AccountNumber",
-									"type": "String"
-								},
-								"sink": {
-									"name": "AccountNumber",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"name": "CustomerID",
 									"type": "String"
 								},
