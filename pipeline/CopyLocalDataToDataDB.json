@@ -18,11 +18,20 @@
 					"source": {
 						"type": "SqlServerSource"
 					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "SqlServerCustomer",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlAdventureCustomer",
 						"type": "DatasetReference"
 					}
 				]
