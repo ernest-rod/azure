@@ -478,16 +478,6 @@
 							},
 							{
 								"source": {
-									"name": "TotalDue",
-									"type": "String"
-								},
-								"sink": {
-									"name": "TotalDue",
-									"type": "Decimal"
-								}
-							},
-							{
-								"source": {
 									"name": "Comment",
 									"type": "String"
 								},
