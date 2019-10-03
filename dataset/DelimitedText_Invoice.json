@@ -1,0 +1,23 @@
+{
+	"name": "DelimitedText_Invoice",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoreMain",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureDataLakeStoreLocation",
+				"fileName": "Invoice.csv",
+				"folderPath": "SalesData"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
