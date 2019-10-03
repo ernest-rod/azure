@@ -29,7 +29,232 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "SalesOrderID",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "SalesOrderID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RevisionNumber",
+									"type": "Byte"
+								},
+								"sink": {
+									"name": "RevisionNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OrderDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "OrderDate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DueDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DueDate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "ShipDate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Status",
+									"type": "Byte"
+								},
+								"sink": {
+									"name": "Status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OnlineOrderFlag",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "OnlineOrderFlag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SalesOrderNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SalesOrderNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PurchaseOrderNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PurchaseOrderNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AccountNumber",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AccountNumber",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CustomerID",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "CustomerID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipToAddressID",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ShipToAddressID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillToAddressID",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "BillToAddressID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipMethod",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShipMethod",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CreditCardApprovalCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CreditCardApprovalCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SubTotal",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "SubTotal",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TaxAmt",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TaxAmt",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Freight",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "Freight",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TotalDue",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "TotalDue",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Comment",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Comment",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "rowguid",
+									"type": "Guid"
+								},
+								"sink": {
+									"name": "rowguid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ModifiedDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "ModifiedDate",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
