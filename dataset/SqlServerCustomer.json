@@ -1,0 +1,12 @@
+{
+	"name": "SqlServerCustomer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerNautilus",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
